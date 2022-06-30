@@ -2,4 +2,4 @@
 
 ### Table of contents
 
-- [Crypto](Cryptography/)
+- [Cryptography](Cryptography/)
