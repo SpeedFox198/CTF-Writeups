@@ -9,24 +9,24 @@ Given a python [script](script.py) and the ciphertext [output](output.txt), decr
 ## Understanding the code
 
 ### The script
-![screenshot1](assets/screenshot1.jpg)
-At first glance it looks like a normal AES encryption using CBC mode. It returns both the IV (Initialisation Vector) and the ciphertext.
+![screenshot1](assets/screenshot1.jpg)  
+At first glance it looks like a normal AES encryption using CBC mode. The `encrypt` function returns both the IV (Initialisation Vector) and the ciphertext.
 
 ### The output
-![screenshot2](assets/screenshot2.jpg)
-From here we can see that there are 2 lines of ciphertexts, perhaps they are the output from the 2 print statements in the script?
+![screenshot2](assets/screenshot2.jpg)  
+From here we can see that there are 2 lines of ciphertexts, perhaps they are the output from the two `print` statements in the script?
 
-### What I've discovered
-By pure luck (yay), while reading the documentation for python's AES encryption function, I noticed that the `iv` and `key` variables were placed at the wrong positions!  
+### What I've noticed
+By pure luck (yay), while reading the documentation for python's `AES` encryption function, I noticed that the `iv` and `key` variables were placed at the wrong positions!  
 This is what I found when hovering my cursor over the function:
-![screenshot3](assets/screenshot3.jpg)
+![screenshot3](assets/screenshot3.jpg)  
 The `key` was being used as the IV, and the `iv` was used as the key for the encryption!
 
 This is very **important**, as this tells us that what was returned by the `encrypt` function is not `IV + ciphertext`, but instead is `key + ciphertext`.
 
 ## Testing things out
 
-### What we have:
+### What we have/know:
 1. The **key** used for the encryption
 2. Encrypted using CBC mode
 3. One of the original plaintext of (the 1st one)
@@ -61,16 +61,15 @@ print(decrypt(ct2, iv))
 Output:
 ```
 b'\x93\x06\xc5Uw\xa9\xa9x\x04\x1c\xbd:\xbc&\xd4\xd5mind to it you can accomplish anything.\t\t\t\t\t\t\t\t\t'
-
 b'\x924\xa7Wk\xab\xb8#\x12\x00\xae1\xe3c\x87\x88\r\nThat was the flag by the way. Anyway, did you know that the DeLorean time machine is a time travel device made by retrofitting a DMC DeLorean vehicle with a flux capacitor, requires 1.21 gigawatts of power and needs to travel 88 miles per hour (142 km/h) to initiate time travel!\x07\x07\x07\x07\x07\x07\x07'
 ```
 
-From the output we can observe that the 1st 16 characters of ciphertext are garbage, while the rest of the text are fine. This is due to how the CBC mode encryption works (go search it up).
+From the output we can observe that the 1st 16 characters of both of the decrypted text are garbage, while the rest of the text are fine. This is due to how the CBC mode works (go [search](https://www.google.com/search?q=CBC+mode) it up).
 
 ### How CBC decryption works
 ![screenshot4](assets/screenshot4.jpg)
 
-As illustrated by the image (which hopefully you can understand), each ciphertext block uses the previous ciphertext block as the IV when decrypting. Except for the 1st ciphertext block, which uses the original IV (which we don't have). This exlains why the text after the 16th character are decrypted correctly.
+As illustrated by the image (which hopefully you can understand), each ciphertext block uses the previous ciphertext block as the IV when decrypting. Except for the 1st ciphertext block, which uses the original IV (which we don't have). This explains why only the text after the 16th character are decrypted correctly.
 
 ## Breaking the cipher
 
@@ -107,7 +106,7 @@ def xor(a, b):
     return bytes(i ^ j for i, j in zip(a, b))
 ```
 
-We first XOR the known IV and the 1st 16 bytes (1st textblock) of the failed decryption, this will give us the decrypted ciphertext before XOR-ing with the IV
+We first XOR the known IV and the first 16 bytes (first textblock) of the failed decryption, this will give us the decrypted ciphertext before XOR-ing with the IV
 ```py
 # Get decrypted ciphertext before XOR
 known_iv = b"0"*16  # Use a known IV for decrypting
@@ -127,7 +126,7 @@ Now that we can get the original IV, we can move on and decrypt the second plain
 
 ### Flag captured
 
-Solution:
+My solution:
 ```py
 from Crypto.Cipher import AES
 
