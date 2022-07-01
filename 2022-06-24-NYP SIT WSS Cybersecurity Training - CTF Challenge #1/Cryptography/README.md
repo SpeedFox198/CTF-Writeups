@@ -9,17 +9,17 @@ Given a python [script](script.py) and the ciphertext [output](output.txt), decr
 ## Understanding the code
 
 ### The script
-![screenshot1](assets/screenshot1.jpg)  
+![screenshot1](/assets/2022-06-24-NYP%20SIT%20WSS%20Cybersecurity%20Training%20-%20CTF%20Challenge%20%231/Cryptography/screenshot1.jpg)  
 At first glance it looks like a normal AES encryption using CBC mode. The `encrypt` function returns both the IV (Initialisation Vector) and the ciphertext.
 
 ### The output
-![screenshot2](assets/screenshot2.jpg)  
+![screenshot2](/assets/2022-06-24-NYP%20SIT%20WSS%20Cybersecurity%20Training%20-%20CTF%20Challenge%20%231/Cryptography/screenshot2.jpg)  
 From here we can see that there are 2 lines of ciphertexts, perhaps they are the output from the two `print` statements in the script?
 
 ### What I've noticed
 By pure luck (yay), while reading the documentation for python's `AES` encryption function, I noticed that the `iv` and `key` variables were placed at the wrong positions!  
 This is what I found when hovering my cursor over the function:
-![screenshot3](assets/screenshot3.jpg)  
+![screenshot3](/assets/2022-06-24-NYP%20SIT%20WSS%20Cybersecurity%20Training%20-%20CTF%20Challenge%20%231/Cryptography/screenshot3.jpg)  
 The `key` was being used as the IV, and the `iv` was used as the key for the encryption!
 
 This is very **important**, as this tells us that what was returned by the `encrypt` function is not `IV + ciphertext`, but instead is `key + ciphertext`.
@@ -67,7 +67,7 @@ b'\x924\xa7Wk\xab\xb8#\x12\x00\xae1\xe3c\x87\x88\r\nThat was the flag by the way
 From the output we can observe that the 1st 16 characters of both of the decrypted text are garbage, while the rest of the text are fine. This is due to how the CBC mode works (go [search](https://www.google.com/search?q=CBC+mode) it up).
 
 ### How CBC decryption works
-![screenshot4](assets/screenshot4.jpg)  
+![screenshot4](/assets/2022-06-24-NYP%20SIT%20WSS%20Cybersecurity%20Training%20-%20CTF%20Challenge%20%231/Cryptography/screenshot4.jpg)  
 _credits: [WhiteTimberwolf (SVG version), Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CBC_decryption.svg)_
 
 As illustrated by the image (which hopefully you can understand), each ciphertext block uses the previous ciphertext block as the IV when decrypting. Except for the 1st ciphertext block, which uses the original IV (which we don't have). This explains why only the text after the 16th character are decrypted correctly.
