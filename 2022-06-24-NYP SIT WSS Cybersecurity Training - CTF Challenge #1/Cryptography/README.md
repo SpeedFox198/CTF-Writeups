@@ -109,7 +109,7 @@ def xor(a, b):
 We first XOR the known IV and the first 16 bytes (first textblock) of the failed decryption, this will give us the decrypted ciphertext before XOR-ing with the IV
 ```py
 # Get decrypted ciphertext before XOR
-known_iv = b"0"*16  # Use a known IV for decrypting
+known_iv = b"0" * 16  # Use a known IV for decrypting
 decrypted_block = failed_decrypt[:16]
 b4_xor = xor(known_iv, decrypted_block)
 ```
