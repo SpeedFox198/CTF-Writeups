@@ -67,7 +67,8 @@ b'\x924\xa7Wk\xab\xb8#\x12\x00\xae1\xe3c\x87\x88\r\nThat was the flag by the way
 From the output we can observe that the 1st 16 characters of both of the decrypted text are garbage, while the rest of the text are fine. This is due to how the CBC mode works (go [search](https://www.google.com/search?q=CBC+mode) it up).
 
 ### How CBC decryption works
-![screenshot4](assets/screenshot4.jpg)
+![screenshot4](assets/screenshot4.jpg)  
+_credits: [WhiteTimberwolf (SVG version), Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CBC_decryption.svg)_
 
 As illustrated by the image (which hopefully you can understand), each ciphertext block uses the previous ciphertext block as the IV when decrypting. Except for the 1st ciphertext block, which uses the original IV (which we don't have). This explains why only the text after the 16th character are decrypted correctly.
 
