@@ -2,7 +2,7 @@
 
 > Can't remember actual name of challenge
 
-## Files
+### Files
 
 - [script.py](script.py)
 - [output.txt](output.txt)
