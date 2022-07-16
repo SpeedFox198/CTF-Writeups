@@ -2,9 +2,13 @@
 
 > Is fernet a new kind of fern?
 
+## Files
+
+- [challenge.txt](challenge.txt)
+
 ## Description
 
-Challenge gives a single [text file](challenge.txt) containing a key and the encrypted flag
+Challenge gives a single [text file](challenge.txt) containing a key and the encrypted flag.
 
 ## Solution
 
