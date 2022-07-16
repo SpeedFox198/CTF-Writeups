@@ -2,6 +2,11 @@
 
 > Can't remember actual name of challenge
 
+## Files
+
+- [script.py](script.py)
+- [output.txt](output.txt)
+
 ## Description
 
 Given a python [script](script.py) and the ciphertext [output](output.txt), decrypt the original plaintext and find the flag.
