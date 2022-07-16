@@ -2,7 +2,7 @@
 
 > Is fernet a new kind of fern?
 
-## Files
+### Files
 
 - [challenge.txt](challenge.txt)
 
