@@ -2,6 +2,8 @@
 
 ### Table of contents
 
+- Misc
+    - [DOS](DOS/)
 - Cryptography
     - [Attack of the Twins](Attack%20of%20the%20Twins/)
 - Steganography
