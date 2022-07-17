@@ -45,5 +45,5 @@ Flag Captured: `FLAG{2_Cl0se_4_C0mFOrt}`
 
 According to the creator, the intended solution was to find the prime numbers `p` and `q` given that the difference of the two numbers is of the value 2. `|p - q| = 2`
 
-The hint to this properties of the two prime numbers were given in the last paragraph in the challenge question.
+The hint to this property of the two prime numbers was given in the last paragraph of the challenge question.
 > Phinley: Not really. I share a lot in common with my twin brother Quinley, so the numbers we picked might have something in common too. Quinley: That could be true. I guess this is what happens when we’re born only two seconds apart.
