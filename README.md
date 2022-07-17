@@ -6,4 +6,4 @@
 - [2022-07-15 NYP Cyber Games Circle Qualifiers 2022](2022-07-15%20NYP%20Cyber%20Games%20Circle%20Qualifiers/)
 
 ### Me, after CTFs
-![seele dead](assets/seele%20dead.png)
+![seele dead](seele%20dead.png)
