@@ -2,6 +2,5 @@
 
 ### Table of contents
 
-- [Crypto](Crypto/)
-    - [ezFernet](Crypto/ezFernet/)
-    - [ezSubstitution](Crypto/ezSubstitution/)
+Crypto
+- [Attack of the Twins](Attack%20of%20the%20Twins/)
