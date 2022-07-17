@@ -14,7 +14,7 @@ meow what a cute cat
 First I ran strings on `new.png` and funny enough, whoever who created this challege decided to pull a prank on us.  
 ![screenshot1](assets/screenshot1.jpg)
 
-~~Flag Captured: Flag{I_am_not_the_flag}~~  
+~~Flag Captured: FLAG{I_am_not_the_flag}~~  
 Nahh that wasn't the flag.
 
 `exiftool` revealed nothing interesting to us, so i ran [stegsolve](https://github.com/zardus/ctf-tools/blob/master/stegsolve/install) to analyse the image. When viewing the colour panes, you could see that the first few bits of the 0th bit planes of each rgb colour are hiding someting.  
