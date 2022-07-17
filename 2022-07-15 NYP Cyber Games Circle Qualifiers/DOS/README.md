@@ -67,6 +67,6 @@ python solution.py | nc vm2.gabrielseet.com 1342
 Output:  
 ![screenshot1.jpg](assets/screenshot1.jpg)
 
-> For some reason the script on the server ran quite slowly and crashes frequently, I had to decrease the value of `n` from and fine tuned the number of times each choices (1 and 2) are being run to make sure that it takes slightly more than 20 seconds to run when connected to the server. The solution I placed here would only run for around 17 seconds locally on [run.py](run.py) (when I last tested it).
+> For some reason the script on the server ran quite slowly and crashes frequently, I had to decrease the value of `n` from and fine tuned the number of times each choices (1 and 2) are being run to make sure that it takes slightly more than 20 seconds to run when connected to the server. The solution I used here would only run for around 17 seconds locally on [run.py](run.py) (when I last tested it).
 
 Flag Captured: `FLAG{d0s_3d_th3_s3rv3r}`
