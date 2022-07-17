@@ -12,15 +12,15 @@ Break me!
 
 ## Analysing the code
 
-We were given a python file [run.py](run.py), and given an `nc` command. When connected to the server, the same python file would be run there.
+We were given a python file [run.py](run.py), and an `nc` command. When connected to the server, the same python file would be run there.
 
-Reading through the python code, we can find out what this program is doing:
+Reading through the python code, we could figure out what this program is doing:
 1. There are 2 modes to choose from for every iteration through the while loop:
-    1. Mode 1: Add a card (number) into the `cards` list.
-    2. Mode 2: Choose 2 random cards from the `cards` list and find their product, iterate through the `cards` list and bruteforce to find the two original randomly chosen cards.
-2. For every operation that is done in each mode, the time taken (in seconds) for the operation to run is added cumulatively into variable `t`.
-3. After 1000 iterations (base on the `count` variable), the while loop will end.
-4. At the end of the while loop, it the value of `t` is greater than 20, the flag will be printed out.
+    1. Mode 1: Add a card (number) into the `cards` list
+    2. Mode 2: Choose 2 random cards from the `cards` list and find their product, iterate through the `cards` list and bruteforce to find the 2 original randomly chosen cards
+2. For every operation that is done in each mode, the time taken (in seconds) for the operation to run is added cumulatively into variable `t`
+3. After 1000 iterations (base on the `count` variable), the while loop will end
+4. At the end of the while loop, it the value of `t` is greater than 20, the flag will be printed out
 
 So from this (and also suggested by the name of this challenge), we can get our flag if we make the code take longer than 20 seconds in total to execute.
 
@@ -51,16 +51,13 @@ n = 10000000000000000000000000000
 
 for i in range(999-111):
     print(1)
-    print(random.randint(
-        n,
-        n + 1000)
-    )
+    print(random.randint(n,n + 1000))
 
 for i in range(1+111):
     print(2)
 ```
 
-> As mentioned before, print statements are too costly, to prevent my local test from taking too long to run due to the print statements, i used `random` to prevent multiple prints in one iteration
+> As mentioned before, print statements are too costly, to prevent my local test from taking too long to run due to the print statements, i used `random` to prevent multiple prints in one iteration.
 
 After ensuring that our script works on our local [run.py](run.py). It's time to pipe our script's output to the server:
 ```
