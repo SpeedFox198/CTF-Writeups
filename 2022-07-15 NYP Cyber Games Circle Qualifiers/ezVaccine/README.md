@@ -23,7 +23,7 @@ Oh dear! What is this?
 
 Ok, apparently there's a length limit set to this input. After testing a little bit, the maximum length allowed for both the username and password inputs is 8 characters.
 
-Modified our code to make it 8 characters:
+Modified my code to make it 8 characters:
 ```
 'or 1 --
 ```
@@ -31,15 +31,16 @@ Modified our code to make it 8 characters:
 Let's try that again:  
 ![screenshot3](assets/screenshot3.jpg)
 
-Interesting, it's even blacklisted some characters. After a few more tries, I found that these characters are being blacklisted: `=` `-` `;`
+Interesting, some characters aren't allowed. After a few more tries, I found that these characters are being blacklisted: `=` `-` `;`
 
-To help me with creating the code for injection, I tried to see what the actual SQL query might look like:
+## Solution
 
+This is what I think the SQL query will probably look like:
 ```sql
 SELECT * FROM Users WHERE username='$username' AND password='$password';
 ```
 
-In the end, I came up with this code that will be within 8 characters and does not contain any of the blacklisted characters:
+I came up with this code that will be within 8 characters and does not contain any of the blacklisted characters:
 
 In the username field:
 ```
