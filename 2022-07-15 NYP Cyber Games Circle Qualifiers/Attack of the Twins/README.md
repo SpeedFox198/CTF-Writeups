@@ -36,7 +36,7 @@ Next, I tired using the [RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool). 
 ```
 
 Running the RsaCtfTool:  
-![screenshot1.jpg](assets/screenshot1.jpg)  
-![screenshot2.jpg](assets/screenshot2.jpg)
+![screenshot1](assets/screenshot1.jpg)  
+![screenshot2](assets/screenshot2.jpg)
 
 Flag Captured: `FLAG{2_Cl0se_4_C0mFOrt}`
