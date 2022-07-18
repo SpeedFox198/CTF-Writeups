@@ -49,8 +49,8 @@ By double clicking on the `ct` and `key` variables in Ghidra, I can go to where 
 { 0x67, 0x30, 0x30, 0x64, 0x62, 0x79, 0x33, 0x77, 0x30, 0x72, 0x6c, 0x64 }
 ```
 
-I then proceed to rewrite the `printFlag` function in CPP ([solution.cpp](solution.cpp)):
-```cpp
+I then proceed to rewrite the `printFlag` function in C++ ([solution.cpp](solution.cpp)):
+```c++
 #include <iostream>
 
 int main()
