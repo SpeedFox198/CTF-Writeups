@@ -9,6 +9,7 @@
 - Steganography
     - [meow](meow/)
 - Web
+    - [ezLog](ezLog/)
     - [ezVaccine](ezVaccine/)
 - Reverse Engineering
     - [helloworld](helloworld/)
