@@ -39,7 +39,7 @@ Also the calculation of `i * j` will be very costly if the numbers are very huge
 
 So all we have to do, is to add a lot of extremely **large** integers into the `cards` list using choice 1, and then run choice 2 enough number of times such that `t` will be greater than 20.
 
-> `print` statements are also very very costly, however the hosted script obviously didn't use print statements.
+> `print` statements are also very very costly, however the hosted script probably didn't use print statements.
 
 ## Solution
 
