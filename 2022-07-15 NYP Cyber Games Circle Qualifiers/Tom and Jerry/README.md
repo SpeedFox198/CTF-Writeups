@@ -1,6 +1,6 @@
 # Tom and Jerry
 
-> _Failed to solve this during the CTF_
+> _Failed to solve this during the CTF QAQ_
 
 ## Challenge Description
 
