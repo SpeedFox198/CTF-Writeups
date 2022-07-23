@@ -52,5 +52,6 @@ Flag Captured: `FLAG{+442083659905}`
 
 1. Someone solved it as they recognised that this was a stadium, and searched `"Stadium established 1882"` (There was some soccer fans who recognised the logo)
 2. A genius took note that the only overseas english country that he could think of where cars keeps to the left lane is in the UK, and he managed to find the location based on that. (big brain)
+3. One of my friends found the location by using Google Lens, such a simple yet effective method!
 
 ![screenshot11](assets/screenshot11.jpg)
