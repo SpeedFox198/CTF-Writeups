@@ -49,12 +49,12 @@ In the username field:
 
 In the password field:
 ```
-or 1 or'
+or'
 ```
 
 The resulting SQL query will look like this:
 ```sql
-SELECT * FROM Users WHERE username=''or' AND password='or 1 or'';
+SELECT * FROM Users WHERE username=''or' AND password='or'';
 ```
 
 Let's test it out:  
