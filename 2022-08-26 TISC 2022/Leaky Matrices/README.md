@@ -2,7 +2,7 @@
 
 ### Files
 
-- [2WKV_Whitepaper.pdf](./2WKV_Whitepaper.pdf)
+- [2WKV_Whitepaper.pdf](2WKV_Whitepaper.pdf)
 
 ## Challenge Description
 
