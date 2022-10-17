@@ -31,7 +31,7 @@ There's also a lot of hintings in the image telling us that "BPB" is of interest
 
 After some searching, it turns out that BPB is the short form for [BIOS parameter block](https://en.wikipedia.org/wiki/BIOS_parameter_block).
 
-In NTFS, the BPB can be found in the [PBS](https://en.wikipedia.org/wiki/NTFS#Partition_Boot_Sector_(PBS))
+In NTFS, the BPB can be found in the [Partition Boot Sector](https://en.wikipedia.org/wiki/NTFS#Partition_Boot_Sector_(PBS))
 
 ## Solution
 

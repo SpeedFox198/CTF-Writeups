@@ -346,7 +346,7 @@ def reverse_callback():
     #     print_permitted_reverse((i,))
 
     # 9-byte alphanumeric patches
-    for _ in permitted_characters:
+    for _ in permitted_characters:  # first byte is c_val == ord("c")
         for a in permitted_characters:
             for b in permitted_characters:
                 for c in permitted_characters:
