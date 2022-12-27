@@ -9,11 +9,7 @@
 <!-- - Misc -->
 - Cryptography
     - [ECB Xoracle](./ECB%20Xoracle/)
-    - [Mathematics of Cryptography](.)
+    - [Mathematics of Cryptography](./Mathematics%20of%20Cryptography/)
 
 
 > Played CTF till 5.30 AM 👍
-
-
-Me and my love of crypto:
-![lol](./lol.png)
