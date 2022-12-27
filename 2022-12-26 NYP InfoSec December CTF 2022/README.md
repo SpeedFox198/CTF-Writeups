@@ -11,5 +11,4 @@
     - [ECB Xoracle](./ECB%20Xoracle/)
     - [Mathematics of Cryptography](./Mathematics%20of%20Cryptography/)
 
-
 > Played CTF till 5.30 AM 👍
