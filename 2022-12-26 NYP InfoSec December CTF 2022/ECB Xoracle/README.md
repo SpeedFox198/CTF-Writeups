@@ -44,7 +44,7 @@ So I can craft my payload to guess the next unknown character of the flag, by co
 ## Solution
 
 Wrote a [script](script.py) to automate the guessing of the flag:  
-```py
+```python
 import string
 from pwn import b64d, remote
 
