@@ -21,7 +21,7 @@ def one_attempt(incomplete):
     pt = "".join(char*16 for char in incomplete) + "A"  # Extra to ensure pt%16>0
     received = send(pt.encode())
     result = b64d(received.replace(">", "").strip())
-    return result[:BLOCK_SIZE] == result[-(BLOCK_SIZE*2): -BLOCK_SIZE]
+    return result[:BLOCK_SIZE] == result[-(BLOCK_SIZE*2):-BLOCK_SIZE]
 
 
 def solve():
