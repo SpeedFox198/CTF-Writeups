@@ -3,7 +3,7 @@
 ### Table of contents
 
 - Web
-    - [Blindfold Enthusiasts](.)
+    - [Blindfold Enthusiasts](./Blindfold%20Enthusiasts/)
 - Reverse Engineering
     - [Deobf Me](./Deobf%20Me/)
 <!-- - Misc -->
