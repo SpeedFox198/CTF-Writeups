@@ -5,7 +5,7 @@
 - Web
     - [Blindfold Enthusiasts](.)
 - Reverse Engineering
-    - [Deobf Me](.)
+    - [Deobf Me](./Deobf%20Me/)
 <!-- - Misc -->
 - Cryptography
     - [ECB Xoracle](./ECB%20Xoracle/)
