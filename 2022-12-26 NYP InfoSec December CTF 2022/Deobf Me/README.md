@@ -20,7 +20,7 @@ Idk if there was a shorter solution, if I did it by guessing some of the things 
 After reading the code, I found that the `initialize` is used to create the obfuscated code.
 
 Some code and random variable names are formatted into `result`:  
-```python
+```py
 l = 'lambda'
 char = str_to_chrs('chr','chr',str)
 ladd1 = str_to_chrs('lambda a:a+1',c2,str)
@@ -32,7 +32,7 @@ result = f'({l} {c1}:({l} {c1},{c2}:({l} {c3},{c4},{c5},{c6}:(lambda {c7},{c8},{
 ```
 
 What I did next was to refactor the result code which defined multiple lambda functions and calling them into a multiline version for readability:  
-```python
+```py
 def funcA(c1):
     def funcB(c1, c2):
         def funcC(c3, c4, c5, c6):
@@ -49,7 +49,7 @@ funcA(eval)
 ```
 
 And replaced the variable names for each level of function being called:  
-```python
+```py
 c1 = eval
 def funcB(c1, c2):
     def funcC(c3, c4, c5, c6):
@@ -64,7 +64,7 @@ funcB(c1, c1(char))
 ```
 
 And so on:  
-```python
+```py
 c1 = eval
 c2 = c1(char)  # eval(char)
 def funcC(c3, c4, c5, c6):
@@ -77,7 +77,7 @@ def funcC(c3, c4, c5, c6):
 funcC(c1, c2, c1(ladd1), c1(ladd2))
 ```
 
-```python
+```py
 c1 = eval
 c2 = eval(char)
 c3 = c1
@@ -92,7 +92,7 @@ def funcD(c7, c8, c9):
 funcD(c3(code), flag_obf, c3(p))
 ```
 
-```python
+```py
 c3 = c1 = eval
 c4 = c2 = eval(char)
 c5 = eval(ladd1)
@@ -107,7 +107,7 @@ else:
 ```
 
 Looking at the `str_to_chrs` function, it basically uses the litteral `chr` function (or `c2`, `c4`) and chains the result of the callable `obf_method` using `+` to create back the same string `x` that's being obfuscated. E.g.:  
-```python
+```py
 # This line:
 str_to_chrs('chr','chr',str)
 
@@ -119,7 +119,7 @@ chr(99)+chr(104)+chr(114)
 ```
 
 Continue my process of deobfuscating the `initialize` function:  
-```python
+```py
 code = 'input("Enter flag: ")'
 char = str_to_chrs('chr','chr',str)
 ladd1 = str_to_chrs('lambda a:a+1',c2,str)
@@ -130,7 +130,7 @@ ifstr = str_to_chrs('if',c4,str)
 flag_obf = str_to_chrs(flag,c4,eval_obf)
 ```
 
-```python
+```py
 code = 'input("Enter flag: ")'
 char = chr
 ladd1 = lambda a: a + 1
@@ -140,7 +140,7 @@ p = print
 flag_obf = str_to_chrs(flag,chr,eval_obf)  # Obsfucating the flag using eval_obf
 ```
 
-```python
+```py
 code = 'input("Enter flag: ")'
 char = chr
 ladd1 = lambda a: a + 1
@@ -162,7 +162,7 @@ else:
     c9("Give it another try!")
 ```
 
-```python
+```py
 flag_obf = str_to_chrs(flag,chr,eval_obf)
 
 c5 = lambda a: a + 1
@@ -175,7 +175,7 @@ else:
     print("Give it another try!")
 ```
 
-```python
+```py
 flag_obf = str_to_chrs(flag,chr,eval_obf)
 c5 = lambda a: a + 1
 c6 = lambda b: b + 2
@@ -195,7 +195,7 @@ _*Also `c4` which is the `chr` function is given the name `s`_
 Using my editor (which thankfully highlights corresponding brackets that my cursor is on), I found the portion of the code that contains the obfuscated `flag_obf`:  
 
 So i assigned the names to the corresponding functions and got the flag:  
-```python
+```py
 s = chr
 i = lambda a: a + 1
 x = lambda b: b + 2

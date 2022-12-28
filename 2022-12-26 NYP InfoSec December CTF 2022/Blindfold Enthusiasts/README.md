@@ -65,7 +65,7 @@ Basically:
 - password: `' or SUBSTR(password, 1, <length of guess>) = '<guessed characters>' -- -`
 
 [Script](script.py) to automate the guessing proccess:  
-```python
+```py
 import requests
 from string import printable
 

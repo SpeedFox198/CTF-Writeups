@@ -64,7 +64,7 @@ phi = n + 1 - sqrt( (p^3−q^3)/(p-q) + n )       (Sub equation 1)
 ## Maths using Python
 
 Script to calculate `phi`, `d` and decrypt `ct`:  
-```python
+```py
 from Crypto.Util.number import long_to_bytes
 import math
 
