@@ -6,7 +6,6 @@
     - [Blindfold Enthusiasts](./Blindfold%20Enthusiasts/)
 - Reverse Engineering
     - [Deobf Me](./Deobf%20Me/)
-<!-- - Misc -->
 - Cryptography
     - [ECB Xoracle](./ECB%20Xoracle/)
     - [Mathematics of Cryptography](./Mathematics%20of%20Cryptography/)
