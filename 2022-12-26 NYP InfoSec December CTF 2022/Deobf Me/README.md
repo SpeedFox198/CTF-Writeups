@@ -17,7 +17,7 @@ Idk if there was a shorter solution, if I did it by guessing some of the things 
 
 ![Go play Honkai Impact :)](assets/TeriDerp.png)
 
-After reading the code, I found that the `initialize` is used to create the obfuscated code.
+After reading the code, I found that the `initialize` function is used to create the obfuscated code.
 
 Some code and random variable names are formatted into `result`:  
 ```py
@@ -31,7 +31,7 @@ flag_obf = str_to_chrs(flag,c4,eval_obf)
 result = f'({l} {c1}:({l} {c1},{c2}:({l} {c3},{c4},{c5},{c6}:(lambda {c7},{c8},{c9}: {c9}("You R l33t Python RE master.") if {c7}=={c8} else {c9}("Give it another try!"))({c3}({code}),{flag_obf},{c3}({p})))({c1},{c2},({c1}({ladd1})),({c1}({ladd2}))))({c1},{c1}({char})))(eval)'
 ```
 
-What I did next was to refactor the result code which defined multiple lambda functions and calling them into a multiline version for readability:  
+What I did next was to refactor the result code, which defined multiple lambda functions and called them, into a multiline version for readability:  
 ```py
 def funcA(c1):
     def funcB(c1, c2):
