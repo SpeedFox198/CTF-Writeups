@@ -1,9 +1,20 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
-<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
-  <polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
-  <script type="text/javascript">
-    alert("XSS");
-  </script>
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg">
+  <polygon points="60,30 90,90 30,90">
+    <animateTransform
+      onbegin="alert('XSS')"
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 60 70"
+      to="360 60 70"
+      dur="10s"
+      repeatCount="indefinite" />
+  </polygon>
 </svg>
