@@ -47,25 +47,25 @@ Could you decrypt and recover the message for me?
 
 4. Since `x = 16` let's continue to simplify the equation:  
     Math:
-    ```math :D
+    ```
     e = 1616
-      = 11 * 16
+      = 101 * 16
 
     c ≡ m^e (mod n)
-    c ≡ (m^16)^11 (mod n)
-    c ≡ M^11 (mod n)  (Let M = m^16)
+    c ≡ (m^16)^101 (mod n)
+    c ≡ M^101 (mod n)  (Let M = m^16)
     ```
 
-5. Since 11 is a prime number, it is coprime to `phi`, this means that we can find a corresponding private exponent `d` and decode it like in RSA:  
+5. Since 101 is a prime number, it is coprime to `phi`, this means that we can find a corresponding private exponent `d` and decode it like in RSA:  
     More python:
     ```py
-    # btw e//x == 11
+    # btw e//x == 101
     d = pow(e//x, -1, phi)  # d is inverse of e
     y = pow(c, d, n)  # Decrypt c to y
     ```
-    More math:
-    ```more math :)
-    c ≡ M^11 (mod n)
+    More math :)
+    ```
+    c ≡ M^101 (mod n)
     M ≡ c^d (mod n)
     M ≡ y (mod n)
     y ≡ M (mod n)
@@ -73,8 +73,8 @@ Could you decrypt and recover the message for me?
     ```
 
 6. Player will need to know that 16 is a power of 2 and that something called modular square root exists:  
-    Even more maths:
-    ```even more math :/
+    Even more maths :/
+    ```
     y ≡ m^16 (mod n)
     y ≡ m^(2^4) (mod n)
     ```
