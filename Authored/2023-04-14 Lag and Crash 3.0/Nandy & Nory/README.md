@@ -23,6 +23,17 @@ E.g.: LNC2023{101} means the 1st input (at the top) must be True, the 2nd input 
 P.S. I hope you suffer twice as much as what I went through drawing this thing manually.
 
 
+## TL;DR
+
+The file is a circuit created using [circuit-diagram.org](circuit-diagram.org)
+
+Solution is to trace circuit starting from the output, and solve the circuit starting from the output.
+
+This tracing proccess can be done either manually, or by using a script.
+
+> I intended for it to be traced by a script but apparently most people traced it manually by hand
+
+
 ## Intended Solution
 
 1. Players are given a `challenge.cddx` file. They are required to search the web and find out that CDDX is a format used to store circuit diagrams created using the circuit editor [circuit-diagram.org](circuit-diagram.org)  
